@@ -1,6 +1,9 @@
 {
-  "name": "node-authentication",
+  "name": "malibagci_com",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "~1.0.0",
     "cookie-parser": "~1.0.0",
