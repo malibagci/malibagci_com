@@ -7,7 +7,7 @@ app = express(),
 bodyParser = require('body-parser');
 
 // Make sure to include the JSX transpiler
-require('node-jsx').install();
+require('node-jsx').install({extension: '.jsx'});
 
 
   app.set('port', process.env.PORT || 3000);
@@ -30,5 +30,5 @@ app.get('*', function(req, res) {
 });
 
 app.listen(app.get('port'), function() {
-  
+
 });
