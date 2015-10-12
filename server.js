@@ -3,11 +3,14 @@
 var express = require('express'),
 path = require('path'),
 app = express(),
-port = process.env.PORT || 3000,
+
 bodyParser = require('body-parser');
 
 // Make sure to include the JSX transpiler
 require('node-jsx').install();
+
+
+  app.set('port', process.env.PORT || 3000);
 
 // Include static assets. Not advised for production
 app.use(express.static(path.join(__dirname, 'public')));
@@ -26,5 +29,6 @@ app.get('*', function(req, res) {
     });
 });
 
-app.listen(port);
-console.log('Server is Up and Running at Port : ' + port);
+app.listen(app.get('port'), function() {
+  
+});
